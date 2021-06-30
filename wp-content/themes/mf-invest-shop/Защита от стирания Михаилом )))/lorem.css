@@ -1,0 +1,85 @@
+/*Убрать вверху навигационного бара страницы возможность регистрации, оставить только авторизацию*/
+.rcl-register {display: none !important}
+
+/*Убрать регистрация, авторизация в шапке попапа рекола*/
+.form_head{display: none !important}
+
+/*Центровать авторизацию на 100% блоака */
+.panel_lk_recall .form_reg, .panel_lk_recall .form_auth {width: 100%;}
+
+/*МИнус реклама плагина*/
+.mo_image_id{display: none !important}
+
+/*Убрать лишние пробелы*/
+.form-block-rcl br{display: none !important}
+
+/*Центровать по попапу*/
+.form-tab-rcl {text-align: center}
+
+/*Кнопки ФБ, Инста, Линкед задано из админки плагина ширина 284px*/
+
+/*Чекбокс "запомнить меня"*/
+.rcl-field-input {display: none !important}
+
+/*Кнопка "Войти"*/
+.panel_lk_recall .form-tab-rcl input[type="submit"] {display: none !important}
+
+/*Потеряли (забыли) пароль убрал*/
+.form-tab-rcl .form-block-rcl a.link-remember-rcl {display: none !important}
+
+/*=======================================*/
+/*Save
+20200723_0259*/
+/*!*Убрать вверху навигационного бара страницы возможность регистрации, оставить только авторизацию*!
+.rcl-register {display: none !important}
+
+!*Убрать регистрация, авторизация в шапке попапа рекола*!
+.form_head{display: none !important}
+
+!*Центровать авторизацию на 100% блоака *!
+.panel_lk_recall .form_reg, .panel_lk_recall .form_auth {width: 100%;}
+
+!*МИнус реклама плагина*!
+.mo_image_id{display: none !important}
+
+!*Убрать лишние пробелы*!
+.form-block-rcl br{display: none !important}
+
+!*Центровать по попапу*!
+.form-tab-rcl {text-align: center}
+
+!*Кнопки ФБ, Инста, Линкед задано из админки плагина ширина 284px*!
+
+!*Кнопка "Войти"*!
+.panel_lk_recall .form-tab-rcl input[type="submit"] {display: none !important}
+
+!*Потеряли (забыли) пароль убрал*!
+.form-tab-rcl .form-block-rcl a.link-remember-rcl {display: none !important}
+
+!*Убрал "количество комментов* в публикации*!
+.filter-data {display: none !important}
+
+!*ЛК: убрал возможность смены аватара*!
+#rcl-avatar .avatar-icons .rcl-avatar-icon {display: none !important}
+
+!*ЛК: убрал возможность смены фона ЛК*!
+.cab_header {display: none !important}
+
+!*ЛК: к хуям снес всю шапку*!
+.office-sunshine #lk-conteyner {display: none !important}
+
+!*Фильтры на 75% ширины*!
+.filters:hover {width: 75% !important; white-space: inherit !important;}*/
+
+/*=======================================*/
+/*/.Save
+20200723_0259*/
+
+/*Плагин комментариев Facebook*/
+._5lm5 {display: none !important}
+
+/*Убрать родительские таксономии, выводить li, забанить p*/
+.taxonomy_field_single_post_1 > p  {display: none !important;}
+
+/*Левая херня в ЛК http://prntscr.com/tsirl7 */
+.cabinet_sidebar_after, .cabinet_sidebar_before {display: none;}

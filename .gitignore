@@ -1,0 +1,8 @@
+dev
+.idea
+backup
+wp-content/plugins/miniorange-login-openid
+wp-content/plugins/search-filter-pro
+wp-content/plugins/wp-staging-pro
+wp-content/plugins/wptelegram-login
+wp-config.php

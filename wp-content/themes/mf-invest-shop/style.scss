@@ -1,0 +1,3213 @@
+/*!
+Theme Name: MF Invest Shop
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: mf-invest-shop
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+MF Invest Shop is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+	 ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+	 ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+  /*margin: 0px 0px 100px 0px; !* lia v.20200714_0056 http://prntscr.com/th6ngl чтобы было выидно вардамп *!*/
+}
+
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+}
+
+
+ul, ol {
+  margin: 0 0 1.5em 3em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+figure {
+  margin: 1em 0;
+  /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa;
+}
+
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+}
+
+select {
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  color: royalblue;
+}
+
+/*a:visited {*/
+/*color: purple;*/
+/*}*/
+
+a:hover, a:focus, a:active {
+  color: midnightblue;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.main-navigation ul ul {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
+  position: absolute;
+  top: 100%;
+  left: -999em;
+  z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+  left: -999em;
+  top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  left: 100%;
+}
+
+.main-navigation ul ul a {
+  width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+}
+
+.main-navigation li {
+  float: left;
+  position: relative;
+}
+
+.main-navigation a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: block;
+  }
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block;
+}
+
+.post,
+.page {
+  margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+.gallery-caption {
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.filters-lv-2 label span {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.button-upload_google {
+  /*padding: 15px 25px;*/
+  /*background: #007bff;*/
+  /*color: #fff;*/
+  /*display: inline-block;*/
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+}
+
+.s-tab {
+  cursor: pointer;
+  border: 1px solid currentColor;
+  padding: 15px 25px;
+  color: #007bff
+}
+
+.active-tab {
+  transition: .2s;
+  background: #007bff;
+  color: #fff;
+}
+
+.addrepeaterfield {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  background: #007bff;
+  cursor: pointer;
+  z-index: 5;
+  position: relative;
+  right: 0;
+}
+
+.child-terms {
+  display: flex;
+  padding-left: 7px;
+  flex-direction: column;
+}
+
+.float-right input[type=text] {
+  min-height: 38px;
+}
+
+.btn:hover, .btn:active {
+  background: #c76d0a;
+  border-color: currentColor;
+}
+
+div.success-btn-added {
+  background: #58a60a;
+  border-color: currentColor;
+}
+
+.rcl-public-box .rcl-form-field .rcl-terms-select .rcl-field-input {
+  background: #fff;
+}
+
+.category-list.rcl-field-input.type-checkbox-input {
+  /*column-count: 2;*/
+  /*display: columns;*/
+  overflow: hidden;
+}
+
+.rcl-field-input .rcl-checkbox-box, .rcl-field-input .rcl-radio-box {
+  margin-right: 0;
+}
+
+.rcl-field-input .block-label {
+  margin-right: 0;
+}
+
+.rcl-public-form .category-list .child-list-category {
+  margin: 0;
+}
+
+.rcl-field-input .block-label {
+  width: 100%;
+}
+
+.child-list-category {
+  width: 50%;
+}
+
+.child-list-category:nth-child(odd) {
+  float: left;
+}
+
+.child-list-category:nth-child(even) {
+  float: right;
+}
+
+#id22 {
+  display: none;
+}
+
+.f18 {
+  font-size: 18px;
+  line-height: 20px;
+  height: 40px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+#ajax-insert p {
+  font-size: 14px;
+  line-height: 18px;
+  /* 20210128 ЛИА Заменил, на главной, ломало вывод товаров = виды бизнеса http://prntscr.com/xqttaf */
+  /* min-height: 108px; */
+  min-height: 0px;
+  max-height: 108px;
+  overflow: hidden;
+}
+
+.p-jumbotron {
+  padding: 2em 1em;
+}
+
+.p-jumbotron iframe {
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+header {
+  height: 100px;
+  padding: 15px 0;
+}
+
+header .custom-logo {
+  max-height: 80px;
+  max-width: 80px;
+}
+
+#content {
+  padding-top: 15px;
+}
+
+.editor-mode-tabs {
+  display: none;
+}
+
+.post-origin {
+  white-space: pre-line;
+}
+
+.s_post_details {
+  margin-top: 20px;
+}
+
+.repeater-single {
+  overflow: hidden;
+  position: relative;
+}
+
+.repeater-single .button-upload_google {
+  float: left;
+}
+
+/*.repeater-single input {*/
+/*width: 50% !important;*/
+/*float: right !important;*/
+/*}*/
+.repeater-single .button-upload_google + span {
+  padding-left: 10px;
+  line-height: 40px;
+}
+
+.btn {
+  position: relative;
+  padding: .375rem 30px;;
+}
+
+.btn span {
+  padding-left: 22px;
+  position: relative;
+}
+
+.btn span:before {
+  position: absolute;
+  content: '';
+  background: url(assets/img/save_to_drive.png) 0 -61px;
+  background-size: 21px 121px;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 0;
+}
+
+#wp-contentarea-post-wrap {
+  padding: 5px;
+}
+
+.popup-addsocial {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-addsocial.show {
+  display: flex;
+}
+
+.popup-itself {
+  background: #fff;
+  width: 500px;
+  padding: 25px 15px;
+}
+
+.popup-itself label {
+  width: 100%;
+  display: flex;
+}
+
+.popup-itself input {
+  width: calc(100% - 30px);
+}
+
+.helpers {
+  display: none;
+}
+
+.profile-field-social_facebook .facebook-helper {
+  display: block;
+}
+
+.profile-field-social_instagram .instagram-helper {
+  display: block;
+}
+
+.profile-field-social_linkedin .linkedin-helper {
+  display: block;
+}
+
+.profile-field-social_telegram .telegram-helper {
+  display: block;
+}
+
+.thumbail-field {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#post-thumb {
+  border: none;
+}
+
+.float-right {
+  float: right;
+}
+
+.post-img {
+  float: left;
+  margin-right: 15px;
+}
+
+.post-jumbotron {
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  width: 32%;
+}
+
+.post-jumbotron:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.post-jumbotron .go-to-post {
+  padding: 10px 0;
+}
+
+.mo-openid-app-icons > p {
+  width: 100% !important;
+}
+
+#tab-button-chat {
+  display: none;
+}
+
+.cabinet-post-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.jumbotron-text {
+  padding-top: 10px;
+  text-align: center;
+}
+
+span.author {
+  padding-top: 10px;
+}
+
+.jumbotron {
+  display: block;
+  color: #333;
+}
+
+.jumbotron:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.repeater-youtube-cont > div + div {
+  margin-top: 8px;
+}
+
+.navigation.post-navigation {
+  display: none;
+}
+
+.filters-block {
+  position: relative;
+  text-align: center;
+}
+
+.btn-open-filter {
+  margin-bottom: 20px;
+
+}
+
+.searchandfilter ul.sf_date_field {
+  display: flex;
+}
+
+.searchandfilter ul.sf_date_field li + li {
+  margin-left: 10px;
+}
+
+.searchandfilter input[type=submit] {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  position: relative;
+}
+
+#ajax-insert {
+  justify-content: space-between;
+}
+
+#ajax-insert .jumbotron {
+  width: 32%;
+}
+
+.searchandfilter input[type=submit]:hover,
+.searchandfilter input[type=submit]:active {
+  background: #c76d0a;
+  border-color: currentColor;
+}
+
+.searchandfilter h4 {
+  font-weight: bold;
+}
+
+/*Не показывать инпут первый*/
+/*.sf-level-0 > label .sf-count{*/
+/*	display: none;*/
+/*}*/
+
+/*20201023_0922 Каждый второй фильтр покрасить в другой цвет*/
+.searchandfilter ul:nth-child(2n) {
+  background-color: #f1f6ff;
+}
+
+/*20201023_0922 Фильтры выпуклые*/
+.searchandfilter ul li {
+  /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);*/
+}
+
+.sf-level-0 > label {
+  font-weight: bold;
+}
+
+/*20201023_1048 Фильтры чуть ниже кнопки выводить*/
+.filter-cont {
+  display: none;
+  margin: 141px -15px;
+  position: absolute;
+  /*box-shadow: 3px 3px #cccccc50;*/
+  /*background: #cccccc50;*/
+  background: #fff;
+  z-index: 10;
+  text-align: initial;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /*20201025_0644*/
+  border-radius: 4px; /*20201025_0644*/
+  /*width: 100vh; !*20201025_20201025 На ширину видимой области*!*/
+}
+
+/*20201025_1611 Увеличение ширины вывода фильров*/
+.filter_plus_width:active .filter-cont {
+  width: calc(100% + 10vh);
+}
+
+/*20201025_1611 Увеличение ширины вывода фильров*/
+.filter_plus_width:hover .filter-cont {
+  width: calc(100% + 10vh);
+}
+
+/*20201025_0722 Липкая кнопка фильтров*/
+.sticky_filter_button {
+
+}
+
+/*20201025_0727 Липкая кнопка ПРИМЕНИТЬ фильтры JS c сайта https://html5css.ru/howto/howto_js_scroll_to_top.php*/
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  /*left: 50%; !* 20201025_0831 https://www.w3.org/Style/Examples/007/center.ru.html*!*/
+  /*margin-right: -50%;  !* 20201025_0831 https://www.w3.org/Style/Examples/007/center.ru.html*!*/
+  /*transform: translate(-50%, -50%);  !* 20201025_0831 https://www.w3.org/Style/Examples/007/center.ru.html*!*/
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #007bff; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #c76d0a; /* Add a dark-grey background on hover */
+}
+
+/*20201025_0839 Липкая кнопка СБРОСА фильров JS c сайта https://html5css.ru/howto/howto_js_scroll_to_top.php*/
+#myBtn1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 80px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  /*left: 50%; !* 20201025_0831 https://www.w3.org/Style/Examples/007/center.ru.html*!*/
+  /*margin-right: -50%;  !* 20201025_0831 https://www.w3.org/Style/Examples/007/center.ru.html*!*/
+  /*transform: translate(-50%, -50%);  !* 20201025_0831 https://www.w3.org/Style/Examples/007/center.ru.html*!*/
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #c76d0a; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn1:hover {
+  background-color: #cccccc; /* Add a dark-grey background on hover */
+}
+
+
+.parent-category label {
+  float: none !important;
+  background: #f0f0f0;
+  font-weight: 700 !important;
+}
+
+.parent-category {
+  padding: 0 !important;
+}
+
+.filter-cont ul {
+  padding-left: 0;
+}
+
+.comment-to-input {
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  .post-jumbotron {
+    width: 49%;
+  }
+
+  #ajax-insert .jumbotron {
+    width: 49%;
+  }
+}
+
+@media (max-width: 767px) {
+  #ajax-insert .display-4 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  #ajax-insert .jumbotron {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .category-list.rcl-field-input.type-checkbox-input {
+    column-count: 1;
+  }
+
+  .child-list-category:nth-child(even),
+  .child-list-category:nth-child(odd) {
+    float: none;
+    width: 100%;
+  }
+
+  .post-jumbotron {
+    width: 100%;
+  }
+}
+
+/*Каждый четный "контейнер" покрасить в этот цвет*/
+.container > .row:nth-child(even) {
+  /*background: #fdffbb;*/
+}
+
+/*отладка*/
+.row {
+  /*border: 1px red solid;*/
+}
+
+/*отладка*/
+.col {
+  /*border: 1px orange solid;*/
+}
+
+/*Покраска кнопок WP-RECALL-а*/
+a.recall-button, span.recall-button, .recall-button.rcl-upload-button, input[type="submit"].recall-button, input[type="submit"] .recall-button, input[type="button"].recall-button, input[type="button"] .recall-button, a.recall-button:hover, .recall-button.rcl-upload-button:hover, input[type="submit"].recall-button:hover, input[type="submit"] .recall-button:hover, input[type="button"].recall-button:hover, input[type="button"] .recall-button:hover {
+  background: #007bff !important;
+}
+
+/*Покраска "радио" WP-RECALL-а*/
+.rcl-field-input input[type="checkbox"]:checked + label.block-label::before, .rcl-field-input input[type="radio"]:checked + label.block-label::before {
+  background: #007bff !important;
+  border-color: #ccc !important;
+}
+
+/*Стилизация пагинации*/
+.wp-pagenavi span.current {
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+  border-radius: 5px;
+}
+
+/*чтобы не вылазили за div кнопки коллапса (аккордиона)*/
+.btn-primary {
+  overflow: hidden; /*чтобы не вылазили за div кнопки коллапса (аккордиона)*/
+  z-index: 80; /*поверх выпадающего меню*/
+  max-width: 100%; /*чтобы текст на рвал кнопку вправо*/
+
+}
+
+/*Блоки "Данные подтверждены*/
+/*Блоки "Данные подтверждены*/
+.da_net_h1 {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  /*style="border: solid #eeeeee 1px; border-radius: 5px"*/
+  margin: 0.3rem 0.3rem;
+}
+
+/*Документы подтверждены*/
+.da_net:hover {
+  font-weight: bold;
+  transition: font-weight 0.3s;
+}
+
+/*При наведении на ссылку, подсвечивается да/нет*/
+.da_net_h1:hover .da_net {
+  font-weight: bold;
+  transition: font-weight 0.3s;
+}
+
+/*Блоки "Данные подтверждены: Да/Нет*/
+.da_net_net {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.0rem;
+  line-height: 150.6%;
+  color: #FF0000;
+  text-transform: uppercase;
+  border-bottom: 1px #FF0000 solid; /*цвет подчеркивания под текстом */
+  display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+  margin: 0 0 1.5rem 0;
+}
+
+/*ДА, верифицирован*/
+.verified_yes {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.0rem;
+  line-height: 150.6%;
+  color: green;
+  text-transform: uppercase;
+  border-bottom: 1px green solid; /*цвет подчеркивания под текстом */
+  display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+  margin: 0 0 1.5rem 0;
+}
+
+/*НЕ верифицирован*/
+.verified_no {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.0rem;
+  line-height: 150.6%;
+  color: #FF0000;
+  text-transform: uppercase;
+  border-bottom: 1px #FF0000 solid; /*цвет подчеркивания под текстом */
+  display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+  margin: 0 0 1.5rem 0;
+}
+
+/*Проверка заказана инвестором*/
+.verified_checkordered {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.0rem;
+  line-height: 150.6%;
+  background-color: yellow;
+  color: #555;
+  text-transform: uppercase;
+  border-bottom: 1px #555 solid; /*цвет подчеркивания под текстом */
+  display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+  margin: 0 0 1.5rem 0;
+}
+
+/*checkwithoutdocs : Проверка заказана, документы НЕ предоставлены*/
+.verified_checkwithoutdocs {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.0rem;
+  line-height: 150.6%;
+  background-color: #ffcfbf;
+  color: #555;
+  text-transform: uppercase;
+  border-bottom: 1px #555 solid; /*цвет подчеркивания под текстом */
+  display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+  margin: 0 0 1.5rem 0;
+}
+
+/*checknotverified : Проверены, данные НЕ подтверждены*/
+.verified_checknotverified {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.0rem;
+  line-height: 150.6%;
+  background-color: #ffa798;
+  color: #555;
+  text-transform: uppercase;
+  border-bottom: 1px #555 solid; /*цвет подчеркивания под текстом */
+  display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+  margin: 0 0 1.5rem 0;
+}
+
+/*Изенение инпутов фильтров поиска*/
+.searchandfilter .sf-range-max, .searchandfilter .sf-range-min {
+  min-width: fit-content;
+}
+
+
+/* CSS ЛИА  20200725 _0136-- */
+/*Цвет фона всеё страницы (не получилось сделать неполучилось)*/
+/*body {*/
+/*    background-color: red !important;*/
+/*}*/
+
+/*row хедера*/
+.site-header {
+  padding: 9px 0 0 16px;
+}
+
+.logo_header {
+  /*background: #ff9226;*/
+  width: 5rem !important;
+  padding: 0;
+}
+
+
+.near_logo_text_h1 {
+  font-size: 1.0rem;
+}
+
+.near_logo_text_h2 {
+  font-size: 0.7rem;
+}
+
+
+/*Переключение языков*/
+.switcher {
+  /*opacity: 50%;*/
+  margin: 2px 23px 0 0;
+  /*transition: opacity 1s;*/
+  border-radius: 5px;
+  width: 175px !important;
+  max-height: 550px !important;
+  background-color: #262626;
+  color: #262626;
+
+}
+
+/*Как глубоко вниз открываются языки*/
+.switcher .option {
+  max-height: 550px !important;
+  background-color: #fff;
+}
+
+/*Языки*/
+.switcher .selected {
+  background: #fff !important;
+}
+
+/*Переключение языков: цвет бордера главной кнопки*/
+.switcher .selected a {
+  border: 1px solid transparent !important;
+  /*color: transparent !important;*/
+  padding: 3px 5px;
+}
+
+/*Переключение языков: цвет вокруг выбранного флага*/
+.switcher a:hover img {
+  background: #262626 !important;
+}
+
+/*Переключение языков: при наведении, цвет плашки*/
+.switcher .option a:hover {
+  background: #262626 !important;
+  color: #fff;
+}
+
+/*.switcher:hover {
+	opacity: 100%;
+	transition: opacity 1s;*/
+
+/*Контакты WP-RECALL: http://prntscr.com/u01xan */
+#block_author-rcl {
+  background: transparent;
+  width: 100%;
+}
+
+/*Контакты WP-RECALL: http://prntscr.com/u0241o */
+.userlist.rows-list .thumb-user {
+  background: transparent;
+}
+
+/*Контакты WP-RECALL:  http://prntscr.com/u01yy3 */
+.userlist.rows-list .userlist_top {
+  background: transparent;
+}
+
+/*<!-- Комменты, жалобы, Facebook комменты = ссылки на страницы-->*/
+.jalobi_commenty_fb_a_ellipsis > a > h6 {
+  white-space: nowrap !important; /* Запрещаем перенос строк */
+  overflow: hidden !important; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis !important; /* Добавляем многоточие */
+  margin: 2px 0;
+}
+
+.jalobi_commenty:hover, .jalobi_commenty_fb:hover {
+  background: #f0f0fa;
+}
+
+.multi-collapse .card {
+  border: none !important;
+}
+
+/*Мобильная верстка iPhoneX*/
+@media screen and (max-width: 576px) {
+
+  /*Дизайн FIGMA*/
+  h1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    /* font-size: 28px; */
+    line-height: 150.6%;
+    color: #000000;
+    font-size: 1rem;
+  }
+
+
+  hr {
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.5em;
+  }
+
+  hr {
+    color: #000000;
+    background-color: #000000;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /*Запрет прокручивания iframe при мобильной верстке пальцем и колесиком*/
+  .container-fluid {
+    position: relative;
+  }
+
+  /* (не сработало) Запрет прокручивания iframe пальцем и колесиком (главная страница)*/
+  .p-jumbotron iframe {
+    position: relative;
+  }
+
+  /*Запрет прокручивания iframe пальцем и колесиком (главная страница)*/
+  #ajax-insert .jumbotron {
+    position: relative;
+  }
+
+  .wraping {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /*Параметры логотипа header*/
+  .logo_header {
+    width: 43px !important;
+    height: 43px !important;
+    margin: 9px 0 0 0 !important;
+  }
+
+  /*Редактировать отдельно картинку логотипа*/
+  .custom-logo-link > img {
+    margin: -7px 0 0 -22px !important;
+    width: 4rem;
+    height: 4rem;
+    max-width: none;
+  }
+
+  /*Параметри всего текста хэдер отступ от лого*/
+  .text_header_margin_logo {
+    margin: 0 0 0 45px !important;
+  }
+
+  /*Параметры главного текста возле логотипа header*/
+  .near_logo_text_h1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 150.6%;
+    color: #0085FF;
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  .near_logo_text_h1 > a {
+    padding: 0;
+  }
+
+  /*Параметры второстепенного текста возле лого*/
+  .near_logo_text_h2 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 150.6%;
+    color: #ff2340;
+    padding: 0 !important;
+  }
+
+  /*iframe поста*/
+  .post-img > iframe {
+    width: 326rem;
+    height: 22rem;
+    min-height: 22rem;
+  }
+
+  /*div iframe-а поста*/
+  .post-img {
+    width: 326px;
+    height: 22rem;
+    min-height: 22rem;
+    padding: 0 !important;
+  }
+
+  /*container-fluid div-а iframe-а поста*/
+  .container-fluid_post-img {
+    width: 100%;
+    height: 22rem;
+    min-height: 22rem;
+    padding: 0 !important;
+  }
+
+  /*Переключение языков*/
+  .switcher {
+    opacity: 100%;
+    margin: 2px 23px 0 0;
+    transition: opacity 1s;
+    border-radius: 5px;
+    width: 35px !important;
+    transition: width 1s;
+  }
+
+  .switcher:hover {
+    opacity: 100%;
+    transition: opacity 1s;
+    /*
+    margin: 2px 180px 0 0;
+    */
+    transition: margin 1s;
+    width: 175px !important;
+    transition: width 1s;
+  }
+
+  /*Блоки "Данные подтверждены*/
+  .da_net_h1 {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    /*style="border: solid #eeeeee 1px; border-radius: 5px"*/
+    margin: 1.5px 0;
+  }
+
+  /*Блоки "Данные подтверждены: div в котором хранится Черный основной текст*/
+  .jalobi_commenty {
+    padding: 10px 0 0 0;
+  }
+
+
+  /*Блоки "Данные подтверждены: Черный основной текст*/
+  .jalobi_commenty_a > h4 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150.6%;
+    color: #0085FF;
+    border-bottom: 1px #0085FF solid; /*цвет подчеркивания под текстом */
+    display: table-cell; /*ширина подчеркивания по тексту в заголовке*/
+  }
+
+  /*Блоки "Данные подтверждены: Черный дополнительный к основному тексту*/
+  .jalobi_commenty_a > h6 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150.6%;
+    margin: 0 0 0 0;
+    color: #0085FF;
+  }
+
+  /*Блоки "Данные подтверждены: Да/Нет*/
+  .da_net_net {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150.6%;
+    color: #FF0000;
+    text-transform: uppercase;
+    border-bottom: 1px #FF0000 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+  }
+
+  /*Превью профиля падавана*/
+  .zero_padding_zero_margin, #block_author-rcl {
+    padding: 0 !important;
+    margin: 0 !important;;
+
+  }
+
+  /*Контакты: Автор пцбликации http://prntscr.com/u04qpx */
+  #block_author-rcl > h3 {
+    padding: 0 !important;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150.6%;
+    /* identical to box height, or 21px */
+    color: #000000;
+  }
+
+  .profile_thumbnail_wp_recall_user_rows_php {
+    width: content-box;
+    margin: 14px 0 10px 0;
+    width: 100px !important;
+    padding: 0 !important;
+    display: contents;
+
+  }
+
+  /*Контакты: Автор пцбликации http://prntscr.com/u05ki0*/
+  .user-name {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150.6%;
+    /* identical to box height, or 21px */
+    color: #000000;
+  }
+
+  /*Контакты: Автор пцбликации http://prntscr.com/u05lp4*/
+  .display-4 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px !important;
+    line-height: 150.6%;
+    /* or 45px */
+
+
+    color: #000000;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u05p9h */
+  .container_wp_recall_contacts {
+    padding: 0 !important;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u05r6p */
+  .foto_and_name {
+    margin: 0 !important;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u068ap */
+  .imya_kogda_bil {
+    position: relative;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u068ap */
+  .kogda_bil {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u06o69 */
+  .rcl-table__cell-w-30 > label {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150.6%;
+    /* or 21px */
+    color: #000000;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u06ue9 */
+  .rcl-table__cell {
+    padding: 0 !important;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u06vf2 */
+  .rcl-field-core {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150.6%;
+    /* or 21px */
+
+
+    color: #0085FF;
+    text-align: right;
+  }
+
+  /*Все кнопки http://prntscr.com/u08s3a */
+  .rcl-field-core > a > .btn-primary {
+    background: #0085FF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    height: 24px;
+    line-height: 0.5;
+  }
+
+  /*Только Контакты эта кнопка http://prntscr.com/u099z7 */
+  .rcl-field-core > a > .btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+
+  .btn-primary {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150.6%;
+    /* identical to box height, or 23px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+
+  /*Парметры H1 вылазящего за пределы блока*/
+  .entry-header {
+    white-space: normal !important; /* Запрещаем перенос строк */
+    overflow: hidden !important; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis !important; /* Добавляем многоточие */
+  }
+
+  /*Название каждого раздела H4 разворачивающегося аккордиона*/
+  .nazvanie_razdela > h4 {
+    font-family: Rubik !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 15px !important;
+    line-height: 150.6% !important;
+    /* or 23px */
+
+    text-align: center;
+
+    color: #000000 !important;
+  }
+
+  /*Приятный вид аккордеона*/
+  .nazvanie_razdela_knopka {
+    position: absolute;
+  }
+
+  .otkivaushayasya_karto4ka {
+    position: relative;
+    top: -33px;
+    z-index: 10;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .single-post .card {
+    border: none !important;
+  }
+
+  .single-post .card-body {
+    padding: 1.25rem 0 !important;
+  }
+
+
+  .taxonomy_field_single_post_1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 150.6%;
+    /* identical to box height, or 15px */
+
+
+    color: #000000;
+  }
+}
+
+/*Десктопная верстка */
+@media screen and (min-width: 1150px) {
+
+  /*Дизайн FIGMA*/
+  h1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 150.6%;
+    color: #000000;
+  }
+
+  hr {
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.5em;
+  }
+
+  hr {
+    color: #000000;
+    background-color: #000000;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /*Запрет прокручивания iframe при мобильной верстке пальцем и колесиком*/
+  .container-fluid {
+    position: relative;
+  }
+
+  .wraping {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /*Header*/
+  /*Параметры логотипа header*/
+  /*.logo_header {*/
+  /*	width: 4.3rem !important;*/
+  /*	height: 4.3rem !important;*/
+  /*	margin: 0.3rem 0 0 0 !important;*/
+  /*}*/
+  /*Редактировать отдельно картинку логотипа*/
+  .custom-logo-link > img {
+    /*margin: 9px 0 0 16px !important;*/
+    width: 5.3rem;
+    height: 5.3rem;
+    max-width: none;
+  }
+
+  /*Параметри всего текста хэдер отступ от лого*/
+  .text_header_margin_logo {
+    margin: 0 0 0 4.3rem !important;
+  }
+
+  /*Параметры главного текста возле логотипа header*/
+  .near_logo_text_h1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 150.6%;
+    color: #0085FF;
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  .near_logo_text_h1 > a {
+    padding: 0;
+  }
+
+  /*Параметры второстепенного текста возле лого*/
+  .near_logo_text_h2 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.0rem;
+    line-height: 150.6%;
+    color: #ff2340;
+    padding: 0 !important;
+  }
+
+  /*iframe*/
+  /*iframe поста*/
+  .post-img > iframe {
+    width: 326rem;
+    height: 46rem;
+    min-height: 46rem;
+  }
+
+  /*div iframe-а поста*/
+  .post-img {
+    width: 326px;
+    height: 46rem;
+    min-height: 46rem;
+    padding: 0 !important;
+  }
+
+  /*container-fluid div-а iframe-а поста*/
+  .container-fluid_post-img {
+    width: 100%;
+    height: 46rem;
+    min-height: 46rem;
+    padding: 0 !important;
+  }
+
+  /*Переключение языков*/
+  .switcher {
+    opacity: 100%;
+    margin: 2px 23px 0 0;
+    transition: opacity 1s;
+    border-radius: 5px;
+    width: 35px !important;
+    transition: width 1s;
+  }
+
+  .switcher:hover {
+    opacity: 100%;
+    transition: opacity 1s;
+    /*
+    margin: 2px 180px 0 0;
+    */
+    transition: margin 1s;
+    width: 175px !important;
+    transition: width 1s;
+  }
+
+  /*Блоки "Данные подтверждены*/
+  /*Блоки "Данные подтверждены*/
+  .da_net_h1 {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    /*style="border: solid #eeeeee 1px; border-radius: 5px"*/
+    margin: 0.3rem 0.3rem;
+  }
+
+  /*Блоки "Данные подтверждены: div в котором хранится Черный основной текст*/
+  .jalobi_commenty {
+    padding: 1rem 0 0 0;
+  }
+
+  /*Блоки "Данные подтверждены: Черный основной текст*/
+  .jalobi_commenty_a > h4 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 150.6%;
+    color: #0085FF;
+    border-bottom: 1px #0085FF solid; /*цвет подчеркивания под текстом */
+    display: table-cell; /*ширина подчеркивания по тексту в заголовке*/
+  }
+
+  /*Блоки "Данные подтверждены: Черный дополнительный к основному тексту*/
+  .jalobi_commenty_a > h6 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 150.6%;
+    margin: 0 0 0 0;
+    color: #0085FF;
+  }
+
+  /*Блоки "Данные подтверждены: Да/Нет*/
+  .da_net_net {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    color: #FF0000;
+    text-transform: uppercase;
+    border-bottom: 1px #FF0000 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*ДА, верифицирован*/
+  .verified_yes {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    color: green;
+    text-transform: uppercase;
+    border-bottom: 1px green solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*НЕ верифицирован*/
+  .verified_no {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    color: #FF0000;
+    text-transform: uppercase;
+    border-bottom: 1px #FF0000 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*Проверка заказана инвестором*/
+  .verified_checkordered {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    background-color: yellow;
+    color: #555;
+    text-transform: uppercase;
+    border-bottom: 1px #555 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*checkwithoutdocs : Проверка заказана, документы НЕ предоставлены*/
+  .verified_checkwithoutdocs {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    background-color: #ffcfbf;
+    color: #555;
+    text-transform: uppercase;
+    border-bottom: 1px #555 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*checknotverified : Проверены, данные НЕ подтверждены*/
+  .verified_checknotverified {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    background-color: #ffa798;
+    color: #555;
+    text-transform: uppercase;
+    border-bottom: 1px #555 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*Профиль падавана \wp-content\plugins\wp-recall\templates\user-rows.php*/
+  /*	Ширина блока контактов*/
+  #block_author-rcl {
+    padding: 0 20%;
+  }
+
+  /*Превью профиля падавана*/
+  .zero_padding_zero_margin {
+    padding: 0 !important;
+    margin: 0 !important;;
+  }
+
+  /*Контакты: Автор пцбликации http://prntscr.com/u04qpx */
+  #block_author-rcl > h3 {
+    padding: 0 !important;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 150.6%;
+    /* identical to box height, or 21px */
+    color: #000000;
+  }
+
+  .profile_thumbnail_wp_recall_user_rows_php {
+    width: content-box;
+    margin: 1.4rem 0 1.1rem 0;
+    width: 100px !important;
+    padding: 0 !important;
+    display: contents;
+
+  }
+
+  /*Контакты: Автор пцбликации http://prntscr.com/u05ki0*/
+  .user-name {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 150.6%;
+    /* identical to box height, or 21px */
+    color: #000000;
+  }
+
+  /*Контакты: Автор пцбликации http://prntscr.com/u05lp4*/
+  .display-4 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5rem !important;
+    line-height: 150.6%;
+    /* or 45px */
+    color: #000000;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u05p9h */
+  .container_wp_recall_contacts {
+    padding: 0 !important;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u05r6p */
+  .foto_and_name {
+    margin: 0 !important;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u068ap */
+  .imya_kogda_bil {
+    position: relative;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u068ap */
+  .kogda_bil {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u06o69 */
+  .rcl-table__cell-w-30 > label {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem !important;
+    line-height: 150.6%;
+    /* or 21px */
+    color: #000000;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u06ue9 */
+  .rcl-table__cell {
+    padding: 0 !important;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u06vf2 */
+  .rcl-field-core {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem !important;
+    line-height: 150.6%;
+    /* or 21px */
+    color: #0085FF;
+    text-align: right;
+  }
+
+  /*Контакты: как давно был в сети*/
+  .userlist .status_author_mess.offline {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem !important;
+    line-height: 150.6%;
+    /* or 21px */
+    text-align: right;
+  }
+
+  /*Контакты: кнопки http://prntscr.com/ugaj53 */
+  .rcl-field-core > a > .btn-primary {
+    background: #0085FF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    height: 1.5rem;
+    line-height: 0.5;
+  }
+
+  /*Только Контакты эта кнопка http://prntscr.com/u099z7 */
+  .rcl-field-core > a > .btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+
+  /* Кнопки жалобы на несоответствие под контактами*/
+  .jalobi_commenty_fb_a_ellipsis > a > h6 {
+    font-size: 1.0rem;
+    margin: 0.4rem 0;
+  }
+
+  /* Текст всех кнопок = контакты и контент http://prntscr.com/ugaldw */
+  .btn-primary {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem !important;
+    line-height: 150.6%;
+    /* identical to box height, or 23px */
+    text-align: center;
+    color: #FFFFFF !important;
+  }
+
+  /*Парметры H1 вылазящего за пределы блока*/
+  .entry-header {
+    white-space: normal !important; /* Запрещаем перенос строк */
+    overflow: hidden !important; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis !important; /* Добавляем многоточие */
+  }
+
+  /*Название каждого раздела H4 разворачивающегося аккордиона http://prntscr.com/ugaqwk */
+  .nazvanie_razdela > h4 {
+    font-family: Rubik !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 1.5rem !important;
+    line-height: 150.6% !important;
+    /* or 23px */
+    text-align: center;
+    color: black !important;
+  }
+
+  /*Приятный вид аккордеона*/
+  .nazvanie_razdela_knopka {
+    position: absolute;
+  }
+
+  .otkivaushayasya_karto4ka {
+    position: relative;
+    top: -33px;
+    z-index: 10;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  /*.card {*/
+  /*    border: none !important;*/
+  /*}*/
+
+  .single-post .card-body {
+    padding: 1.25rem 0 !important;
+  }
+
+  /* Размер внутреннего текста аккордиона http://prntscr.com/ugarlv */
+  .taxonomy_field_single_post_1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 150.6%;
+    /* identical to box height, or 15px */
+    color: #000000;
+  }
+
+  .taxonomy_field_single_post_1 > h6 {
+    font-size: 2.0rem;
+  }
+
+  .text_field_single_post_1 > h4 {
+    font-size: 2.0rem;
+  }
+
+  .h6, h6 {
+    font-size: 1.5rem !important;
+  }
+
+  .single-post .card-body > .col > li {
+    font-size: 1.5rem;
+  }
+
+  .text_field_single_post_1 > p {
+    font-size: 1.5rem;
+  }
+
+  /*Текст самого поста*/
+  /*	Этот параметр меняет размер шрифта и пробелов по всему посту, а нужно локально*/
+  /* пытаюсь привязаться к .post-origin*/
+  /*.body {*/
+  /*	font-size: 1.5rem !important;*/
+  /*}*/
+  .post-origin {
+    font-size: 1.5rem;
+  }
+
+  /*	Footer*/
+  .site-info {
+    font-size: 1.5rem;
+  }
+}
+
+/*Мобильная верстка */
+@media screen and (min-width: 576px) {
+
+  /*Дизайн FIGMA*/
+  h1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    /* ЛИА 20210105 */
+    font-size: 2.5rem;
+    line-height: 150.6%;
+    color: #000000;
+  }
+
+  hr {
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.5em;
+  }
+
+  hr {
+    color: #000000;
+    background-color: #000000;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /*Запрет прокручивания iframe при мобильной верстке пальцем и колесиком*/
+  .container-fluid {
+    position: relative;
+  }
+
+  .wraping {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /*Header*/
+  /*Параметры логотипа header*/
+  /*.logo_header {*/
+  /*	width: 4.3rem !important;*/
+  /*	height: 4.3rem !important;*/
+  /*	margin: 0.3rem 0 0 0 !important;*/
+  /*}*/
+  /*Редактировать отдельно картинку логотипа*/
+  .custom-logo-link > img {
+    /*margin: 9px 0 0 16px !important;*/
+    width: 5.3rem;
+    height: 5.3rem;
+    max-width: none;
+  }
+
+  /*Параметри всего текста хэдер отступ от лого*/
+  .text_header_margin_logo {
+    margin: 0 0 0 4.3rem !important;
+  }
+
+  /*Параметры главного текста возле логотипа header*/
+  .near_logo_text_h1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 150.6%;
+    color: #0085FF;
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  .near_logo_text_h1 > a {
+    padding: 0;
+  }
+
+  /*Параметры второстепенного текста возле лого*/
+  .near_logo_text_h2 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.0rem;
+    line-height: 150.6%;
+    color: #ff2340;
+    padding: 0 !important;
+  }
+
+  /*iframe*/
+  /*iframe поста*/
+  .post-img > iframe {
+    width: 326rem;
+    height: 28rem;
+    min-height: 28rem;
+  }
+
+  /*div iframe-а поста*/
+  .post-img {
+    width: 326px;
+    height: 28rem;
+    min-height: 28rem;
+    padding: 0 !important;
+  }
+
+  /*container-fluid div-а iframe-а поста*/
+  .container-fluid_post-img {
+    width: 100%;
+    height: 28rem;
+    min-height: 28rem;
+    padding: 0 !important;
+  }
+
+  /*Переключение языков*/
+  .switcher {
+    opacity: 100%;
+    margin: 2px 23px 0 0;
+    transition: opacity 1s;
+    border-radius: 5px;
+    width: 35px !important;
+    transition: width 1s;
+  }
+
+  .switcher:hover {
+    opacity: 100%;
+    transition: opacity 1s;
+    /*
+    margin: 2px 180px 0 0;
+    */
+    transition: margin 1s;
+    width: 175px !important;
+    transition: width 1s;
+  }
+
+  /*Блоки "Данные подтверждены*/
+  /*Блоки "Данные подтверждены*/
+
+  /* <!-- Данные ПОДТВЕРЖДЕНЫ--> по два в ряд */
+  .col-lg-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 48% !important;
+  }
+
+  .da_net_h1 {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    /*style="border: solid #eeeeee 1px; border-radius: 5px"*/
+    margin: 0.3rem 0.3rem;
+  }
+
+  /*Блоки "Данные подтверждены: div в котором хранится Черный основной текст*/
+  .jalobi_commenty {
+    padding: 1rem 0 0 0;
+  }
+
+  /*Блоки "Данные подтверждены: Черный основной текст*/
+  .jalobi_commenty_a > h4 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 150.6%;
+    color: #0085FF;
+    border-bottom: 1px #0085FF solid; /*цвет подчеркивания под текстом */
+    display: table-cell; /*ширина подчеркивания по тексту в заголовке*/
+  }
+
+  /*Блоки "Данные подтверждены: Черный дополнительный к основному тексту*/
+  .jalobi_commenty_a > h6 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 150.6%;
+    margin: 0 0 0 0;
+    color: #0085FF;
+  }
+
+  /*Блоки "Данные подтверждены: Да/Нет*/
+  .da_net_net {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    color: #FF0000;
+    text-transform: uppercase;
+    border-bottom: 1px #FF0000 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*ДА, верифицирован*/
+  .verified_yes {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    color: green;
+    text-transform: uppercase;
+    border-bottom: 1px green solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*НЕ верифицирован*/
+  .verified_no {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    color: #FF0000;
+    text-transform: uppercase;
+    border-bottom: 1px #FF0000 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*Проверка заказана инвестором*/
+  .verified_checkordered {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    background-color: yellow;
+    color: #555;
+    text-transform: uppercase;
+    border-bottom: 1px #555 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*checkwithoutdocs : Проверка заказана, документы НЕ предоставлены*/
+  .verified_checkwithoutdocs {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    background-color: #ffcfbf;
+    color: #555;
+    text-transform: uppercase;
+    border-bottom: 1px #555 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*checknotverified : Проверены, данные НЕ подтверждены*/
+  .verified_checknotverified {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 150.6%;
+    background-color: #ffa798;
+    color: #555;
+    text-transform: uppercase;
+    border-bottom: 1px #555 solid; /*цвет подчеркивания под текстом */
+    display: inline-block; /*ширина подчеркивания по тексту в заголовке*/
+    margin: 0 0 1.5rem 0;
+  }
+
+  /*Профиль падавана \wp-content\plugins\wp-recall\templates\user-rows.php*/
+  /*	Ширина блока контактов*/
+  #block_author-rcl {
+    padding: 0 20%;
+  }
+
+  /*Превью профиля падавана*/
+  .zero_padding_zero_margin {
+    padding: 0 !important;
+    margin: 0 !important;;
+  }
+
+  /*Контакты: Автор пцбликации http://prntscr.com/u04qpx */
+  #block_author-rcl > h3 {
+    padding: 0 !important;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 150.6%;
+    /* identical to box height, or 21px */
+    color: #000000;
+  }
+
+  .profile_thumbnail_wp_recall_user_rows_php {
+    width: content-box;
+    margin: 1.4rem 0 1.1rem 0;
+    width: 100px !important;
+    padding: 0 !important;
+    display: contents;
+
+  }
+
+  /*Контакты: Автор пцбликации http://prntscr.com/u05ki0*/
+  .user-name {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 150.6%;
+    /* identical to box height, or 21px */
+    color: #000000;
+  }
+
+  /*Контакты: Автор пцбликации http://prntscr.com/u05lp4*/
+  .display-4 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5rem !important;
+    line-height: 150.6%;
+    /* or 45px */
+    color: #000000;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u05p9h */
+  .container_wp_recall_contacts {
+    padding: 0 !important;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u05r6p */
+  .foto_and_name {
+    margin: 0 !important;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u068ap */
+  .imya_kogda_bil {
+    position: relative;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u068ap */
+  .kogda_bil {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u06o69 */
+  .rcl-table__cell-w-30 > label {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem !important;
+    line-height: 150.6%;
+    /* or 21px */
+    color: #000000;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u06ue9 */
+  .rcl-table__cell {
+    padding: 0 !important;
+  }
+
+  /* Контакты: Автор пцбликации http://prntscr.com/u06vf2 */
+  .rcl-field-core {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem !important;
+    line-height: 150.6%;
+    /* or 21px */
+    color: #0085FF;
+    text-align: right;
+  }
+
+  /*Контакты: как давно был в сети*/
+  .userlist .status_author_mess.offline {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem !important;
+    line-height: 150.6%;
+    /* or 21px */
+    text-align: right;
+  }
+
+  /*Контакты: кнопки http://prntscr.com/ugaj53 */
+  .rcl-field-core > a > .btn-primary {
+    background: #0085FF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    height: 1.5rem;
+    line-height: 0.5;
+  }
+
+  /*Только Контакты эта кнопка http://prntscr.com/u099z7 */
+  .rcl-field-core > a > .btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+
+  /* Кнопки жалобы на несоответствие под контактами*/
+  .jalobi_commenty_fb_a_ellipsis > a > h6 {
+    font-size: 1.0rem;
+    margin: 0.4rem 0;
+  }
+
+  /* Текст всех кнопок = контакты и контент http://prntscr.com/ugaldw */
+  .btn-primary {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem !important;
+    line-height: 150.6%;
+    /* identical to box height, or 23px */
+    text-align: center;
+    color: #FFFFFF !important;
+  }
+
+  /*Парметры H1 вылазящего за пределы блока*/
+  .entry-header {
+    white-space: normal !important; /* Запрещаем перенос строк */
+    overflow: hidden !important; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis !important; /* Добавляем многоточие */
+  }
+
+  /*Название каждого раздела H4 разворачивающегося аккордиона http://prntscr.com/ugaqwk */
+  .nazvanie_razdela > h4 {
+    font-family: Rubik !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 1.5rem !important;
+    line-height: 150.6% !important;
+    /* or 23px */
+    text-align: center;
+    color: black !important;
+  }
+
+  /*Приятный вид аккордеона*/
+  .nazvanie_razdela_knopka {
+    position: absolute;
+  }
+
+  .otkivaushayasya_karto4ka {
+    position: relative;
+    top: -33px;
+    z-index: 10;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  /*.card {*/
+  /*    border: none !important;*/
+  /*}*/
+
+  .single-post .card-body {
+    padding: 1.25rem 0 !important;
+  }
+
+  /* Размер внутреннего текста аккордиона http://prntscr.com/ugarlv */
+  .taxonomy_field_single_post_1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 150.6%;
+    /* identical to box height, or 15px */
+    color: #000000;
+  }
+
+  .taxonomy_field_single_post_1 > h6 {
+    font-size: 2.0rem;
+  }
+
+  .text_field_single_post_1 > h4 {
+    font-size: 2.0rem;
+  }
+
+  .h6, h6 {
+    font-size: 1.3rem !important;
+  }
+
+  .single-post .card-body > .col > li {
+    font-size: 1.3rem;
+  }
+
+  .text_field_single_post_1 > p {
+    font-size: 1.3rem;
+  }
+
+  /*Текст самого поста*/
+  /*	Этот параметр меняет размер шрифта и пробелов по всему посту, а нужно локально*/
+  /* пытаюсь привязаться к .post-origin*/
+  /*.body {*/
+  /*	font-size: 1.5rem !important;*/
+  /*}*/
+  .post-origin {
+    font-size: 1.3rem;
+  }
+
+  /*	Footer*/
+  .site-info {
+    font-size: 1.3rem;
+  }
+}
+
+.single-ambassador h2 {
+  word-break: break-all;
+}
+//section.form-page:not(.active-page) {
+//  display: none;
+//}
+
+.page-id-756 ol {
+  margin: initial;
+}
+
+.page-id-756 p:empty {
+  display: none;
+}
+
+.page-id-756 li+p {
+  margin: 1em 0;
+}
+.page-id-756 .wptelegram-login-output-wrap.container {
+  display: inline-block;
+  width: 180px;
+}
+
+.taxonomy-countries, .taxonomy-uchrediteli_countries, .taxonomy-country_of_registration {
+  .category-list {
+    min-width: 100%;
+  }
+  .child-terms {
+    display: block;
+  }
+  .child-list-category {
+    width: 100%;
+  }
+  .child-list-category:nth-child(odd),
+  .child-list-category:nth-child(even) {
+    float: none;
+  }
+}

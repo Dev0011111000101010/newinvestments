@@ -1,0 +1,3 @@
+jQuery(function($){
+    //export PostRequester;
+});
